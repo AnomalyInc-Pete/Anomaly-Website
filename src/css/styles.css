@@ -1,0 +1,100 @@
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none; }
+
+footer, header, nav, section, main {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0; }
+
+h1 {
+  font-family: "Inter", Helvetica, Arial, sans-serif;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 80px;
+  letter-spacing: 0em; }
+
+*,
+*::before,
+*:after {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+/* IE11 */
+@media all and (-ms-high-contrast: none) {
+  *::-ms-backdrop,
+  [data-aos^=fade][data-aos^=fade], [data-aos^=zoom][data-aos^=zoom] {
+    opacity: 1; } }
+
+body {
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; }
+
+.container {
+  max-width: 85%;
+  width: 100%;
+  margin: 0 auto; }
+
+.koamaru-bg {
+  background-color: #1D1485; }
+
+.spanish-bg {
+  background-color: #F8F3E2; }
+
+.white-bg {
+  background-color: #ffffff; }
+
+.romantic-bg {
+  background-color: #FFD2B1; }
+
+.grenadier-bg {
+  background-color: #E23A01; }
+
+header .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+header .nav-wrap {
+  display: none; }
+
+#intro .txtwrp.col {
+  max-width: 830px;
+  width: 100%; }
