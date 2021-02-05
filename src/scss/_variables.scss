@@ -11,6 +11,16 @@ $grenadier: #E23A01;
 
 $base-font-stack: 'Inter', Helvetica, Arial, sans-serif;
 
+@font-face {
+  font-family: "Bourton";
+  src: url("../fonts/bourtonlinebold.woff2") format("woff2"),
+       url("../fonts/bourtonlinebold.woff") format("woff");
+}
+
+$secondary-font-stack: 'Bourton', Helvetica, Arial, sans-serif;
+
+
+
 
 // Sizing
 
