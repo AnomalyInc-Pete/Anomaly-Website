@@ -20,10 +20,10 @@ h2 {
 }
 
 h3 {
-  font-family: $base-font-stack;
+  font-family: $secondary-font-stack;
   font-size: 40px;
   font-style: normal;
-  font-weight: 900;
+  font-weight: 500;
   line-height: 48px;
   letter-spacing: 0em;
   margin-bottom: 32px;
@@ -39,7 +39,7 @@ h4 {
 }
 
 h5 {
-  font-family: $secondary-font-stack;
+  font-family: $base-font-stack;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -57,7 +57,7 @@ h6 {
 }
 
 .super-paragraph {
-  font-family: $base-font-stack;
+  font-family: $tertiary-font-stack;
   font-size: 40px;
   font-style: normal;
   font-weight: 300;
@@ -67,7 +67,7 @@ h6 {
 }
 
 .large-paragraph {
-  font-size: $secondary-font-stack;
+  font-size: $tertiary-font-stack;
   font-size: 24px;
   font-style: normal;
   font-weight: 200;

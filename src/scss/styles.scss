@@ -104,6 +104,29 @@ a {
   .super-paragraph, h2, h3, h4, h5, a {
     color: $koamaru;
   }
+  &.img-txt {
+    .container {
+      .txtwrap {
+        &.col {
+          h3 {
+            @include flex-row;
+            align-items: center;
+            align-content: center;
+            &::after {
+              display: flex;
+              content: "";
+              width: 62px;
+              height: 24px;
+              background-image: url(../images/koamaru-arrow.svg);
+              background-repeat: no-repeat;
+              background-size: contain;
+              margin-left: 32px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 .white-bg {
@@ -217,8 +240,26 @@ a {
       bottom: 120px;
       margin-top: auto;
       max-width: 830px;
+      h1 {
+        color: $koamaru;
+      }
       .scroll {
         color: $black;
+        display: flex;
+        flex-direction: row;
+        &::after {
+          content: "";
+          display: flex;
+          width: 83px;
+          height: 26px;
+          background-image: url(../images/black-scroll-icon.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          margin-left: 16px;
+        }
+        h5 {
+          color: $black;
+        }
       }
     }
   }
@@ -279,10 +320,13 @@ a {
     background-position: center center;
     height: 80vh;
     &.xilo {
-      background-image: url(../images/xilo-placeholder.jpg);
+      background-image: url(../images/xilo-hero.jpg);
     }
     &.uno {
-      background-image: url(../images/xilo-placeholder.jpg);
+      background-image: url(../images/uno-hero.jpg);
+    }
+    &.urban-baristas {
+      background-image: url(../images/urban-baristas-hero.jpg);
     }
   }
   .container {
