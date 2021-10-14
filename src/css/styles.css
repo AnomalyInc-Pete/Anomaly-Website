@@ -53,6 +53,18 @@ h1 {
   line-height: 80px;
   letter-spacing: 0em;
   margin-bottom: 48px; }
+  @media screen and (max-width: 1270px) {
+    h1 {
+      font-size: 56px;
+      line-height: 72px; } }
+  @media screen and (max-width: 890px) {
+    h1 {
+      font-size: 40px;
+      line-height: 56px; } }
+  @media screen and (max-width: 600px) {
+    h1 {
+      font-size: 32px;
+      line-height: 40px; } }
 
 h2 {
   font-family: "Bourton-linebold", Helvetica, Arial, sans-serif;
@@ -86,6 +98,10 @@ h5 {
   font-weight: 400;
   line-height: 28px;
   letter-spacing: 0em; }
+  @media screen and (max-width: 700px) {
+    h5 {
+      font-size: 16px;
+      line-height: 24px; } }
 
 h6 {
   font-family: "Bourton-base", Helvetica, Arial, sans-serif;
@@ -143,6 +159,9 @@ html {
   max-width: 85%;
   width: 100%;
   margin: 0 auto; }
+  @media screen and (max-width: 1270px) {
+    .container {
+      max-width: 90%; } }
 
 a {
   text-decoration: none;
@@ -274,6 +293,18 @@ a {
     bottom: 120px;
     margin-top: auto;
     max-width: 830px; }
+    @media screen and (max-width: 1270px) {
+      #intro .txtwrap.col {
+        max-width: 650px; } }
+    @media screen and (max-width: 890px) {
+      #intro .txtwrap.col {
+        max-width: 450px; } }
+    @media screen and (max-width: 700px) {
+      #intro .txtwrap.col {
+        bottom: 60px; } }
+    @media screen and (max-width: 600px) {
+      #intro .txtwrap.col {
+        max-width: 360px; } }
     #intro .txtwrap.col h1 {
       color: #1D1485; }
     #intro .txtwrap.col .scroll {
@@ -289,6 +320,11 @@ a {
         background-repeat: no-repeat;
         background-position: center;
         margin-left: 16px; }
+        @media screen and (max-width: 700px) {
+          #intro .txtwrap.col .scroll::after {
+            transform: scale(0.6);
+            margin-left: 0px;
+            margin-top: -2px; } }
       #intro .txtwrap.col .scroll h5 {
         color: #000000; }
   #intro .imgwrap {
@@ -298,22 +334,79 @@ a {
     height: 100%;
     bottom: 0;
     right: 0; }
+    @media screen and (max-width: 440px) {
+      #intro .imgwrap {
+        display: none; } }
     #intro .imgwrap img {
       position: absolute; }
       #intro .imgwrap img.large-planet {
         width: 90%;
         right: -200px;
         bottom: -129px; }
+        @media screen and (max-width: 1270px) {
+          #intro .imgwrap img.large-planet {
+            width: 110%; } }
+        @media screen and (max-width: 1024px) {
+          #intro .imgwrap img.large-planet {
+            width: 120%;
+            right: -240px;
+            bottom: -49px; } }
+        @media screen and (max-width: 800px) {
+          #intro .imgwrap img.large-planet {
+            width: 140%; } }
+        @media screen and (max-width: 530px) {
+          #intro .imgwrap img.large-planet {
+            width: 155%; } }
       #intro .imgwrap img.medium-planet {
         right: 55%;
         bottom: -25px;
         z-index: 100;
         width: 25%; }
+        @media screen and (max-width: 530px) {
+          #intro .imgwrap img.medium-planet {
+            right: 35%; } }
       #intro .imgwrap img.small-planet {
         right: 56%;
         bottom: 64%;
         width: 10%;
         z-index: 100; }
+        @media screen and (max-width: 1024px) {
+          #intro .imgwrap img.small-planet {
+            bottom: 58%; } }
+        @media screen and (max-width: 750px) {
+          #intro .imgwrap img.small-planet {
+            bottom: 48%; } }
+        @media screen and (max-width: 530px) {
+          #intro .imgwrap img.small-planet {
+            bottom: 38%;
+            right: 36%;
+            width: 20%; } }
+  #intro .imgwrap-mobile {
+    display: none; }
+    @media screen and (max-width: 440px) {
+      #intro .imgwrap-mobile {
+        display: flex;
+        position: relative;
+        max-width: 55vw;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0; }
+        #intro .imgwrap-mobile img {
+          position: absolute; }
+          #intro .imgwrap-mobile img.large-planet {
+            width: 81%;
+            top: -20%; }
+          #intro .imgwrap-mobile img.medium-planet {
+            z-index: 100;
+            width: 24%;
+            left: 65%;
+            top: 35%; }
+          #intro .imgwrap-mobile img.small-planet {
+            width: 19%;
+            z-index: 100;
+            left: 87%;
+            top: -14%; } }
 
 .txtwrap.col {
   display: flex;
