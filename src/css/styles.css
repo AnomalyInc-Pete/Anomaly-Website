@@ -38,20 +38,36 @@ input {
   border-radius: 0; }
 
 @font-face {
-  font-family: "Bourton";
-  src: url("../fonts/bourtonlinebold.woff2") format("woff2"), url("../fonts/bourtonlinebold.woff") format("woff"); }
+  font-family: "Bourton-linebold";
+  src: url("../fonts/bourton-linebold.woff2") format("woff2"), url("../fonts/bourton-linebold.woff") format("woff"); }
+
+@font-face {
+  font-family: "Bourton-base";
+  src: url("../fonts/bourton-base.woff2") format("woff2"), url("../fonts/bourton-base.woff") format("woff"); }
 
 h1 {
-  font-family: "Inter", Helvetica, Arial, sans-serif;
+  font-family: "Bourton-linebold", Helvetica, Arial, sans-serif;
   font-size: 64px;
   font-style: normal;
   font-weight: 700;
   line-height: 80px;
   letter-spacing: 0em;
   margin-bottom: 48px; }
+  @media screen and (max-width: 1270px) {
+    h1 {
+      font-size: 56px;
+      line-height: 72px; } }
+  @media screen and (max-width: 890px) {
+    h1 {
+      font-size: 40px;
+      line-height: 56px; } }
+  @media screen and (max-width: 600px) {
+    h1 {
+      font-size: 32px;
+      line-height: 40px; } }
 
 h2 {
-  font-family: "Inter", Helvetica, Arial, sans-serif;
+  font-family: "Bourton-linebold", Helvetica, Arial, sans-serif;
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
@@ -59,16 +75,16 @@ h2 {
   letter-spacing: 0em; }
 
 h3 {
-  font-family: "Inter", Helvetica, Arial, sans-serif;
+  font-family: "Bourton-base", Helvetica, Arial, sans-serif;
   font-size: 40px;
   font-style: normal;
-  font-weight: 900;
+  font-weight: 500;
   line-height: 48px;
   letter-spacing: 0em;
   margin-bottom: 32px; }
 
 h4 {
-  font-family: "Bourton", Helvetica, Arial, sans-serif;
+  font-family: "Bourton-base", Helvetica, Arial, sans-serif;
   font-size: 32px;
   font-style: normal;
   font-weight: 400;
@@ -76,15 +92,19 @@ h4 {
   letter-spacing: 0em; }
 
 h5 {
-  font-family: "Bourton", Helvetica, Arial, sans-serif;
+  font-family: "Bourton-linebold", Helvetica, Arial, sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: 28px;
   letter-spacing: 0em; }
+  @media screen and (max-width: 700px) {
+    h5 {
+      font-size: 16px;
+      line-height: 24px; } }
 
 h6 {
-  font-family: "Bourton", Helvetica, Arial, sans-serif;
+  font-family: "Bourton-base", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -101,7 +121,7 @@ h6 {
   padding-bottom: 24px; }
 
 .large-paragraph {
-  font-size: "Bourton", Helvetica, Arial, sans-serif;
+  font-size: "Inter", Helvetica, Arial, sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 200;
@@ -139,6 +159,9 @@ html {
   max-width: 85%;
   width: 100%;
   margin: 0 auto; }
+  @media screen and (max-width: 1270px) {
+    .container {
+      max-width: 90%; } }
 
 a {
   text-decoration: none;
@@ -169,6 +192,20 @@ a {
   background-color: #F8F3E2; }
   .spanish-bg .super-paragraph, .spanish-bg h2, .spanish-bg h3, .spanish-bg h4, .spanish-bg h5, .spanish-bg a {
     color: #1D1485; }
+  .spanish-bg.img-txt .container .txtwrap.col h3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center; }
+    .spanish-bg.img-txt .container .txtwrap.col h3::after {
+      display: flex;
+      content: "";
+      width: 62px;
+      height: 24px;
+      background-image: url(../images/koamaru-arrow.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-left: 32px; }
 
 .white-bg {
   background-color: #ffffff; }
@@ -256,8 +293,40 @@ a {
     bottom: 120px;
     margin-top: auto;
     max-width: 830px; }
+    @media screen and (max-width: 1270px) {
+      #intro .txtwrap.col {
+        max-width: 650px; } }
+    @media screen and (max-width: 890px) {
+      #intro .txtwrap.col {
+        max-width: 450px; } }
+    @media screen and (max-width: 700px) {
+      #intro .txtwrap.col {
+        bottom: 60px; } }
+    @media screen and (max-width: 600px) {
+      #intro .txtwrap.col {
+        max-width: 360px; } }
+    #intro .txtwrap.col h1 {
+      color: #1D1485; }
     #intro .txtwrap.col .scroll {
-      color: #000000; }
+      color: #000000;
+      display: flex;
+      flex-direction: row; }
+      #intro .txtwrap.col .scroll::after {
+        content: "";
+        display: flex;
+        width: 83px;
+        height: 26px;
+        background-image: url(../images/black-scroll-icon.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-left: 16px; }
+        @media screen and (max-width: 700px) {
+          #intro .txtwrap.col .scroll::after {
+            transform: scale(0.6);
+            margin-left: 0px;
+            margin-top: -2px; } }
+      #intro .txtwrap.col .scroll h5 {
+        color: #000000; }
   #intro .imgwrap {
     position: absolute;
     max-width: 55vw;
@@ -265,22 +334,79 @@ a {
     height: 100%;
     bottom: 0;
     right: 0; }
+    @media screen and (max-width: 440px) {
+      #intro .imgwrap {
+        display: none; } }
     #intro .imgwrap img {
       position: absolute; }
       #intro .imgwrap img.large-planet {
         width: 90%;
         right: -200px;
         bottom: -129px; }
+        @media screen and (max-width: 1270px) {
+          #intro .imgwrap img.large-planet {
+            width: 110%; } }
+        @media screen and (max-width: 1024px) {
+          #intro .imgwrap img.large-planet {
+            width: 120%;
+            right: -240px;
+            bottom: -49px; } }
+        @media screen and (max-width: 800px) {
+          #intro .imgwrap img.large-planet {
+            width: 140%; } }
+        @media screen and (max-width: 530px) {
+          #intro .imgwrap img.large-planet {
+            width: 155%; } }
       #intro .imgwrap img.medium-planet {
         right: 55%;
         bottom: -25px;
         z-index: 100;
         width: 25%; }
+        @media screen and (max-width: 530px) {
+          #intro .imgwrap img.medium-planet {
+            right: 35%; } }
       #intro .imgwrap img.small-planet {
         right: 56%;
         bottom: 64%;
         width: 10%;
         z-index: 100; }
+        @media screen and (max-width: 1024px) {
+          #intro .imgwrap img.small-planet {
+            bottom: 58%; } }
+        @media screen and (max-width: 750px) {
+          #intro .imgwrap img.small-planet {
+            bottom: 48%; } }
+        @media screen and (max-width: 530px) {
+          #intro .imgwrap img.small-planet {
+            bottom: 38%;
+            right: 36%;
+            width: 20%; } }
+  #intro .imgwrap-mobile {
+    display: none; }
+    @media screen and (max-width: 440px) {
+      #intro .imgwrap-mobile {
+        display: flex;
+        position: relative;
+        max-width: 55vw;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0; }
+        #intro .imgwrap-mobile img {
+          position: absolute; }
+          #intro .imgwrap-mobile img.large-planet {
+            width: 81%;
+            top: -20%; }
+          #intro .imgwrap-mobile img.medium-planet {
+            z-index: 100;
+            width: 24%;
+            left: 65%;
+            top: 35%; }
+          #intro .imgwrap-mobile img.small-planet {
+            width: 19%;
+            z-index: 100;
+            left: 87%;
+            top: -14%; } }
 
 .txtwrap.col {
   display: flex;
@@ -303,9 +429,11 @@ a {
   background-position: center center;
   height: 80vh; }
   .img-txt .projectimg.xilo {
-    background-image: url(../images/xilo-placeholder.jpg); }
+    background-image: url(../images/xilo-hero.jpg); }
   .img-txt .projectimg.uno {
-    background-image: url(../images/xilo-placeholder.jpg); }
+    background-image: url(../images/uno-hero.jpg); }
+  .img-txt .projectimg.urban-baristas {
+    background-image: url(../images/urban-baristas-hero.jpg); }
 
 .img-txt .container {
   padding: 88px 0px 160px 0px; }

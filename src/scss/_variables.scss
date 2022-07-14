@@ -9,17 +9,23 @@ $grenadier: #E23A01;
 
 // Typography
 
-$base-font-stack: 'Inter', Helvetica, Arial, sans-serif;
+$base-font-stack: 'Bourton-linebold', Helvetica, Arial, sans-serif;
 
 @font-face {
-  font-family: "Bourton";
-  src: url("../fonts/bourtonlinebold.woff2") format("woff2"),
-       url("../fonts/bourtonlinebold.woff") format("woff");
+  font-family: "Bourton-linebold";
+  src: url("../fonts/bourton-linebold.woff2") format("woff2"),
+       url("../fonts/bourton-linebold.woff") format("woff");
 }
 
-$secondary-font-stack: 'Bourton', Helvetica, Arial, sans-serif;
+@font-face {
+  font-family: "Bourton-base";
+  src: url("../fonts/bourton-base.woff2") format("woff2"),
+       url("../fonts/bourton-base.woff") format("woff");
+}
 
+$secondary-font-stack: 'Bourton-base', Helvetica, Arial, sans-serif;
 
+$tertiary-font-stack: 'Inter', Helvetica, Arial, sans-serif;
 
 
 // Sizing
